@@ -1,1 +1,27 @@
-// стили сетки календаря и заголовка календаря с днями недели
+.calendar {
+    overflow: scroll;
+    &__header {
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        z-index: 200;
+        background-color: white;
+        .day-label {
+            height: 100px;
+            width: 128px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+        }
+    }
+    &__day {
+        display: flex;
+        flex-direction: column;
+    }
+    &__time-slot {
+        border: #dadce0 0.5px solid;
+        width: 120px;
+        height: 60px;
+    }
+}

@@ -1,1 +1,21 @@
-// стили боковой временной шкалы
+.calendar {
+    &__week-container {
+        margin-top: 100px;
+    }
+    &__time-scale {
+        width: 60px;
+        height: 48px;
+        font-size: 18px;
+        margin-right: 60px;
+        position: relative;
+        top: 60px;
+        .time-slot {
+            height: 60px;
+            width: 48px;
+        }
+    }
+    &__week {
+        margin-left: 60px;
+        display: flex;
+    }
+}
