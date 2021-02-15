@@ -22,7 +22,6 @@ export const generateWeekRange = startDate => {
     return result;
 };
 
-// вернет объект даты по переданной дате '2000-01-01' и времени '21:00'
 export const getDateTime = (date, time) => {
     const [hours, minutes] = time.split(':');
     const withHours = new Date(new Date(date).setHours(Number(hours)));

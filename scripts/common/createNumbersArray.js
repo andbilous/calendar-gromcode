@@ -1,9 +1,7 @@
-export const createNumbersArray = (from, to) =>{
-    let res = [];
-    for(let i=from;i<=to;i++){
+export const createNumbersArray = (from, to) => {
+    const res = [];
+    for (let i = from; i <= to; i += 1) {
         res.push(i);
     }
     return res
 }
-
-

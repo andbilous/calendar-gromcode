@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -42,18 +47,17 @@
     <div class="modal hidden overlay">
         <div class="modal__content">
             <div class="create-event">
-                <button class="create-event__close-btn">Close</button>
+                <i class="material-icons create-event__close-btn">close</i>
                 <form class="event-form">
-                    <h2>Create Event</h2>
-                    <input type="text" name="title" placeholder="Title" class="event-form__field" />
+                    <input placeholder="Add title" name="title" type="text" class="event-form__field event-form__title">
                     <div class="event-form__time">
-                        <input type="date" step="any" name="date" class="event-form__field" />
-                        <input type="time" step="any" name="startTime" class="event-form__field" />
-                        <span>-</span>
+                        <input type="date" step="any" name="date" class="datepicker event-form__field" />
+                        <input type="time" step="any" name="startTime" class="datepicker event-form__field" />
                         <input type="time" step="any" name="endTime" class="event-form__field" />
                     </div>
-                    <textarea name="description" placeholder="Description" class="event-form__field"></textarea>
-                    <button type="submit" class="event-form__submit-btn">Create</button>
+                    <textarea name="description" placeholder="Description"
+                        class="materialize-textarea event-form__field event-form__description"></textarea>
+                    <button type="submit" class="btn waves-effect waves-light event-form__submit-btn">Create</button>
 
                 </form>
             </div>
@@ -63,17 +67,16 @@
         <div class="popup__overlay"></div>
         <div class="popup__content">
             <form class="edit-event-form">
-                <h2>Edit Event</h2>
-                <input type="text" name="title" placeholder="Title" class="event-form__field" />
+                <input type="text" name="title" placeholder="Title" class="event-form__title event-form__field" />
                 <div class="event-form__time">
                     <input type="date" step="any" name="date" class="event-form__field" />
                     <input type="time" step="any" name="startTime" class="event-form__field" />
-                    <span>-</span>
                     <input type="time" step="any" name="endTime" class="event-form__field" />
                 </div>
-                <textarea name="description" placeholder="Description" class="event-form__field"></textarea>
-                <button type="submit" class="event-form__submit-btn">Save</button>
-                <button class="delete-event-btn">Delete Event</button>
+                <textarea name="description" placeholder="Description"
+                    class="event-form__description event-form__field materialize-textarea"></textarea>
+                <button type="submit" class="btn waves-effect waves-light event-form__submit-btn">Save</button>
+                <button class="btn waves-effect waves-light delete-event-btn">Delete Event</button>
             </form>
         </div>
     </div>

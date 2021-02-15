@@ -1,1 +1,42 @@
-// стили формы события внутри модального окна
+.create-event {
+    &__close-btn {
+    }
+    .event-form {
+        display: flex;
+        flex-direction: column;
+        &__title {
+            height: 40px;
+            width: 364px;
+            margin-bottom: 21px;
+        }
+        &__description {
+            min-height: 78px;
+            background-color: #f1f3f4;
+            padding: 8px;
+            color: #222;
+            margin-top: 8px;
+            margin-bottom: 6px;
+        }
+        &__field {
+            color: #3c4043;
+            font-family: "Google Sans", Roboto, Arial, sans-serif;
+            font-size: 22px;
+            height: 28px;
+        }
+        &__time {
+            &__field {
+            }
+        }
+        &__submit-btn {
+            background: #1a73e8;
+            color: #fff;
+            outline: none;
+            border: 0;
+            border-radius: 4px;
+            width: 80px;
+            height: 36px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
